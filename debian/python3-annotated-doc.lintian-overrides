@@ -1,0 +1,4 @@
+python3-annotated-doc: copyright-without-copyright-notice
+python3-annotated-doc: initial-upload-closes-no-bugs
+python3-annotated-doc: no-manual-page
+python3-annotated-doc: zero-byte-file-in-doc-directory
