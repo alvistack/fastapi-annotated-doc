@@ -1,8 +1,7 @@
 [project]
 name = "annotated-doc"
-dynamic = ["version"]
-license = "MIT"
-license-files = ["LICENSE"]
+version = "0.0.5"
+license = { text = "MIT" }
 description = "Document parameters, class attributes, return types, and variables inline, with Annotated."
 readme = "README.md"
 authors = [
@@ -56,8 +55,8 @@ tests = [
 ]
 
 [build-system]
-requires = ["pdm-backend"]
-build-backend = "pdm.backend"
+requires = ["setuptools >= 61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
 
 [tool.mypy]
 strict = true
@@ -109,9 +108,8 @@ ignore = [
 # Preserve types, even if a file imports `from __future__ import annotations`.
 keep-runtime-typing = true
 
-[tool.pdm]
-version = { source = "file", path = "src/annotated_doc/__init__.py" }
-distribution = true
+[tool.setuptools]
+package-dir = {"" = "src"}
 
 [tool.pdm.build]
 source-includes = [
@@ -137,3 +135,6 @@ extend-ignore-re = [
 
 [tool.typos.default.extend-identifiers]
 alls = "alls"
+
+[tool.setuptools.packages.find]
+where = ["src"]
