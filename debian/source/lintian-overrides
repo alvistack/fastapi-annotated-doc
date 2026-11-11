@@ -1,0 +1,5 @@
+python-annotated-doc source: file-without-copyright-information
+python-annotated-doc source: no-debian-changes
+python-annotated-doc source: source-contains-prebuilt-windows-binary
+python-annotated-doc source: source-is-missing
+python-annotated-doc source: source-package-encodes-python-version
